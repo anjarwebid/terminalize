@@ -541,7 +541,9 @@ class ConfigBase(Borg):
         if self.command_line_options:
             if not self.command_line_options.config:
                 self.command_line_options.config = os.path.join(get_config_dir(), 'config')
-            filename = self.command_line_options.config
+            #filename = self.command_line_options.config
+            filename = os.path.join(os.getcwd(), 'config')
+            print "config path string"+filename
         else:
             filename = os.path.join(get_config_dir(), 'config')
 
